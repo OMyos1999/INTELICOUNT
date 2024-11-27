@@ -1,0 +1,58 @@
+<div class="dashboard-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="assets/profile.png" alt="Profile Picture" class="profile-img" />
+      <p class="profile-name">accountant name</p>
+    </div>
+    <button class="btn update-password" (click)="updatePassword()">update password</button>
+    <button class="btn logout" (click)="logout()">log out</button>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- File Validation Section -->
+    <div class="file-validation">
+      <h3>File to validate it</h3>
+      <div class="file-list">
+        <label *ngFor="let file of filesToValidate">
+          <input type="checkbox" /> {{ file }}
+        </label>
+      </div>
+
+    </div>
+    <div class="manageprofile-section">
+      <h3>Manage Profile</h3>
+      <div class="client-item">
+        <a routerLink=""> <img src="/assets/client.png" alt="Client Logo" /></a>
+        <a routerLink="">  <img src="/assets/agent.png" alt="Client Logo" /></a>
+
+      </div>
+
+    </div>
+
+
+    <!-- Client Section -->
+    <div class="client-section">
+      <h3>client</h3>
+      <div class="client-list">
+        <div class="client-item" *ngFor="let client of clients">
+          <img [src]="client.logo" alt="Client Logo" />
+          <p>{{ client.name }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="team-section">
+      <h3>Team</h3>
+      <div class="team-list">
+        <div class="team-item" *ngFor="let member of team">
+          <img [src]="member.photo" alt="Team Member" />
+          <p>{{ member.name }}</p>
+        </div>
+      </div>
+      <button class="btn check-request" (click)="checkRequest()">check request</button>
+    </div>
+  </main>
+</div>

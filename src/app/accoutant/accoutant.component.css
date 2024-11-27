@@ -1,0 +1,157 @@
+/* General styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 25%;
+  background-color: #64d593;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+}
+
+.profile {
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  border: 2px solid #fff;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  color: #64d593;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #4bb77d;
+  color: #fff;
+}
+
+.logout {
+  color: red;
+}
+
+.logout:hover {
+  background-color: #ff6f6f;
+}
+
+/* Main content styling */
+.main-content {
+  width: 75%;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.file-validation,
+.client-section,
+.team-section {
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  color: #333;
+}
+
+/* File list */
+.file-list label {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+/* Client and Team sections */
+.client-list,
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.client-item,
+.team-item {
+  text-align: center;
+  flex: 0 1 100px;
+}
+
+.client-item img,
+.team-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Check request button */
+.check-request {
+  display: block;
+  width: 200px;
+  margin: 20px auto 0 auto;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.check-request:hover {
+  background-color: #444;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .client-list,
+  .team-list {
+    justify-content: center;
+  }
+}

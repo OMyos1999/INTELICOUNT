@@ -9,12 +9,16 @@ import { UpdatePasswordComponent } from './update-password/update-password.compo
 import { ResetPasswordEmailComponent } from './reset-password-email/reset-password-email.component';
 import { ResetPasswordPhoneComponent } from './reset-password-phone/reset-password-phone.component';
 import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
+import { AssistantComponent } from './assistant/assistant.component';
+import { AccoutantComponent } from './accoutant/accoutant.component';
 
 // Définir les routes pour chaque composant
 const routes: Routes = [
   { path: 'update-password', component: UpdatePasswordComponent },
   { path: 'reset-password-email', component: ResetPasswordEmailComponent },
   { path: 'reset-password-phone', component: ResetPasswordPhoneComponent },
+  { path: 'accoutant', component: AccoutantComponent },
+  { path: 'assistant', component: AssistantComponent },
   { path: '', redirectTo: '/update-password', pathMatch: 'full' }, // Redirection par défaut
   { path: '**', redirectTo: '/update-password' }, // Gestion des routes inexistantes
 ];
@@ -26,6 +30,8 @@ const routes: Routes = [
     ResetPasswordEmailComponent,
     ResetPasswordPhoneComponent,
     NotFoundComponentComponent,
+    AssistantComponent,
+    AccoutantComponent,
   ],
   imports: [
     HttpClientModule,
